@@ -59,6 +59,3 @@ ex1) a=10 type(a) => <class 'int'>
 
 ex2) b=10.0 type(b) => <class 'float'>
 
-
-
-
