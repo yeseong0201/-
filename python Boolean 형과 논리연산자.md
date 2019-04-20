@@ -36,3 +36,30 @@ x <= y | x 가 y값보다 작거나 같으면 true 반환
 x and y | x 와 y 모두가 true인 경우 true 반환
 x or y | x 와 y 둘 중 하나 이상이 참일 때 true 반환
 not x | x의 불리언 타입에 반대로 출력 (true이면 false)  
+
+## Boolean 활용하기
+
+``` python
+# 비교연산자 나타내기
+a=26
+b=31
+c=54
+(a>b)and(a<c) # false
+```
+
+``` python
+# 응용문제
+stu1 = 'female'
+grade= 2
+(stu1=='female') and (grade==1) # false
+```
+
+
+
+
+
+
+
+
+
+
