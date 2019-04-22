@@ -1,0 +1,108 @@
+# python 반복문(loops)
+
+## 1. while문
+* 조건을 만족하는 동안 true인 코드를 반복 실행
+
+## 2. for 문
+* 시퀀스의 첫 번째 요소부터 마지막 요소까지 차례로 변수에 대입하여 반복 실행
+<hr>
+for 변수 in 시퀀스(문자열, 리스트, 튜플):
+
+True_statement1
+
+True_statement2
+
+True_statement3
+<hr>
+
+```python
+test = [1,2,3,4,5]
+for test in test:
+  print(test) # 1 2 3 4 5
+
+```
+
+```python
+test = [(1,2),(3,4),(5,6)]
+for test in test:
+  print(test) # 12 34 56
+
+```
+
+## range 함수
+* 등차수열을 시퀀스로 표현해야 하는 경우
+* range(10) : 0부터 10 전까지 1씩 증가하는 시퀀스
+* range(1,10) : 1부터 10 전까지 1씩 증가하는 시퀀스 1~9
+* range(1,10,2) : 1부터 10 전까지 2씩 증하는 시퀀스 1 3 4 7 9
+* 표현은 **정수형**으로만 나타낼 수 있다.
+
+```python
+a= list(range(5)) # 0 ~ 4
+a # 0 1 2 3 4
+```
+
+```python
+a = [1,2,3,4,5,6,7,8,9,10] 
+a[2:9:2] # 2 + 1부터 9까지 2씩 증가 : 3 5 7 9
+```
+
+* range()의 내용을 확인하려면 list()나 tuple()로 변환해야 한다.
+* range()는 요소를 계산하기 위한 규칙만 갖고 있고 요소 자체는 갖고 있지 못함.
+* range()는 필요한 요소를 처음부터 미리 다 만들어두는 것이 아니라, 그 요소를 사용해야 하는 시점부터 만들어진다.
+
+```python
+print('몇번 반복하겠습니까? ')
+n = int(input())
+for _ in range(n): # 0~입력한 수 -1 까지 언더바에 저장이 됨.
+  print('hi')
+```
+
+* 구구단 출력하기
+``` python
+for i in range(2,10):
+  for j in range(1,10):
+    print(i*j , end=' ')
+  print('') # 줄바꿈 표시
+```
+
+* 1~ 10000000까지의 합
+```python
+total = 0
+for n in range(1,10000000+1):
+  total +=n
+ print(total)
+ 
+ # 짝수의 합
+
+total = 0
+for n in range(1,10000000+1):
+  if(n%2==0):
+    total +=n
+print(total)
+```
+
+* immutable 한 자료형 : range()는 요소를 직접 갖지 않으므로 수정이 불가하다.
+* 내용을 수정하는 것을 제외한 시퀀스 연산을 적용할 수 있다.
+
+```python
+list(range(0,100,5)[10:20:2]) # 50부터 100까지 10씩 더한다. 새로운 규칙을 생성한다.
+```
+
+## continue문
+* 반복 도중에 한 주기의 실행을 중지하고 다음 주기로 넘어가도록 하는 명령
+```python
+for i in range(1,4):
+  print('현재 반복 주기',i)
+  continue
+  print('다음 반복 주기',i+1)
+```
+
+## break문
+* 반복 전체를 중지하고 다음 명령으로 넘어가도록 하는 명령
+
+```python
+for i in range(4):
+  print(i)
+  break
+  print(i+1)
+ ```
