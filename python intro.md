@@ -42,6 +42,13 @@
 ## [참고] 파이썬 지정 단어(Keyword, Reserve Word)
 * Keyword를 import하면 파이썬에서 지정한 단어들을 확인할 수 있다.
 
+```python
+import keyword
+keyword.kwlist() # 여러가지 파이썬 지정단어 리스트 형태로 출력
+
+len(keyword.kwlist) # 개수 출력 35
+```
+
 ## 파이썬 연산 방법
 - int 형 숫자들의 나눗셈 연산 결과 : 정수 / 정수 = 실수형 (10/3 = 3.3333333)
 - / 는 나누기 연산
